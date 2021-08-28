@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%load static%}
+{%load blog_tags%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="{%static "CSS/blog.css"%}">
+  <title>
+    {%block title_block%}
+    {%endblock%}
+
+  </title>
+  </head>
+  <body>
+    <div class="content">
+      {%block content%}
+      {%endblock%}
+    </div>
+    <div class="sidebar">
+      <h2>RSPC BLOG</h2>
+      <p>
+        Here you can see blog updations...!!
+      </p>
+
+      <p> Total number of Published Posts are:<span id='pcount'>{%my_tags%}</span></p>
+      <h3>Latest Posts are:</h3>{%show_latest_post 4%}
+      <h3>Most Commented Posts are:</h3>{%get_MostCommentedPost as MostCommentedPost%}
+      <ul>
+      {%for post in MostCommentedPost%}
+      <li><a href="{{post.get_absolute_url}}">{{post.title}}</a></li>
+      {%endfor%}
+     </ul>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.content{
+  background: black;
+  width: 60%;
+  float: left;
+
+}
+.sidebar{
+  background: yellow;
+  width: 40%;
+  float: right;
+  color: black;
+
+}
+h1{
+  text-align: center;
+  border-bottom: 1px solid red;
+  padding-bottom: 10px;
+
+}
+body{
+  color: white;
+  background: black;
+}
+#date{
+  color: yellow;
+  font-size: 14px;
+  font-style: italic;
+}
+#ch1{
+  color: yellow;
+  font-style: italic;
+  font-size: 30px;
+  border-bottom: 2px solid red;
+}
+#pcount{
+  font-size: 28px;
+  color: blue;
+  font-weight: bold;
+}
